@@ -4,8 +4,14 @@
   "private": false,
   "main": "src/components/index.js",
   "module": "src/components/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/components/index.js"
+    },
+    "./plugins": "./src/plugins/index.js"
+  },
   "files": [
-    "src/components/**/*.vue"
+    "src"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
