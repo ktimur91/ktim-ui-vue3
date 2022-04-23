@@ -1,24 +1,17 @@
-# ktim-components-vue3
+# ktim-ui-vue3
 
-## Project setup
+## Установка
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm i ktim-ui-vue3 ktim-scss
 ```
 
-### Compiles and minifies for production
+### Использовать точечно
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+import { BaseBtn } 'ktim-ui-vue3'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Использовать все компоненты глобально
+```
+import ktimUi 'ktim-ui-vue3'
+app.use(ktimUi)
+```

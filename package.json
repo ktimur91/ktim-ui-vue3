@@ -1,7 +1,12 @@
 {
-  "name": "ktim-components-vue3",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ktim-ui-vue3",
+  "version": "0.0.1",
+  "private": false,
+  "main": "src/components/index.js",
+  "module": "src/components/index.js",
+  "files": [
+    "src/components/**/*.vue"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
