@@ -1,5 +1,2 @@
-const somePlugin = (args) => {
-  console.log(args)
-}
-
-export default somePlugin
+export { default as calcDropDown } from './calcDropDown'
+export { $busOn, $busOnce, $busOff, $busEmit } from './eventBus'

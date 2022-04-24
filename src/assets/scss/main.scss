@@ -1,0 +1,265 @@
+@import 'resets';
+
+body {
+  overflow: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: var(--b1);
+}
+
+.divider {
+  width: 0;
+  height: 100%;
+  border-left: var(--b1);
+  display: block;
+}
+
+.box {
+  border-radius: var(--br);
+  background-color: var(--box);
+  border: var(--b1);
+}
+
+.bsh {
+  box-shadow: var(--box-shadow);
+}
+
+// Content
+.content {
+  width: 100%;
+  max-width: 1800px;
+  height: 100%;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.scroll-place {
+  overflow: auto;
+}
+
+// Title
+.title {
+  margin: 0;
+
+  @at-root {
+    h1#{&} {
+      font-size: 24px;
+    }
+
+    h2#{&} {
+      font-size: 20px;
+    }
+
+    h3#{&} {
+      font-size: 16px;
+    }
+  }
+}
+
+// Width
+.w {
+  &-100 {
+    width: 100% !important;
+  }
+
+  &-100vw {
+    width: 100vw !important;
+  }
+}
+
+// Height
+.h {
+  &-100 {
+    height: 100% !important;
+  }
+
+  &-100vh {
+    height: 100vh !important;
+  }
+}
+
+// Text align
+.ta {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+// Font size
+.fs {
+  @for $i from 10 to 24 {
+    @if $i % 2==0 {
+      &-#{$i} {
+        font-size: #{$i}px;
+      }
+    }
+  }
+}
+
+.fw {
+  &-n {
+    font-weight: normal;
+  }
+
+  &-b {
+    font-weight: bold;
+  }
+}
+
+// Position
+.pos {
+  &-r {
+    position: relative;
+  }
+
+  &-a {
+    position: absolute;
+  }
+}
+
+// Z index
+.z {
+  &-1 {
+    z-index: -1;
+  }
+
+  &0 {
+    z-index: 0;
+  }
+
+  &1 {
+    z-index: 1;
+  }
+
+  &2 {
+    z-index: 2;
+  }
+
+  &3 {
+    z-index: 3;
+  }
+
+  &4 {
+    z-index: 4;
+  }
+
+  &99999 {
+    z-index: 99999;
+  }
+}
+
+// Cut text
+.cut {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Sticky
+.sticky {
+  &-top {
+    position: sticky;
+    top: 0;
+  }
+
+  &-bottom {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+.cover {
+  display: flex;
+  // background-color: $grey;
+  overflow: hidden;
+
+  &>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.ava-20 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+  }
+
+  &.ava-24 {
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+  }
+
+  &.ava-30 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+
+  &.list {
+    cursor: pointer;
+    width: calc(33% - 5px);
+    flex: auto;
+    // border-radius: $br2;
+
+    &>img {
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: #000;
+
+      &>img {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// Marker
+.marker {
+  display: inline-block;
+  background-color: #EEE;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+
+  &.secondary {
+    background-color: var(--secondary);
+    color: #FFF;
+  }
+
+  &.white {
+    background-color: #FFF;
+    color: var(--grey-ed);
+  }
+
+  &.new {
+    background-color: var(--primary);
+    color: #FFF;
+  }
+
+  &.in-work {
+    background-color: var(--yellow-el);
+    color: #000;
+  }
+
+  &.in-agreement {
+    background-color: var(--green);
+    color: #FFF;
+  }
+}

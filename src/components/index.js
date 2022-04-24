@@ -1,2 +1,6 @@
 // Base
-export { default as BaseBtn } from './base/Btn.vue'
+export { default as BaseIcon } from './base/Icon.vue'
+export { default as BaseDropDown } from './base/DropDown.vue'
+
+// Form
+export { default as FormAutocomplete } from './form/Autocomplete.vue'

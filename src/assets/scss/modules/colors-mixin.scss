@@ -1,0 +1,60 @@
+// Variables
+$colors:(
+  primary   : #096dd9,
+  secondary : #F5F5F5,
+
+  green     : #4caf50,
+  yellow    : #ffc107,
+  red       : #E31E25,
+
+  white     : #FFFFFF,
+  grey      : #EEE,
+  black     : #000000
+);
+$light:(
+  extra-light : 25%,
+  light       : 50%,
+  semi-light  : 75%
+);
+$dark:(
+  extra-dark  : 25%,
+  dark        : 50%,
+  semi-dark   : 75%
+);
+
+// Styles
+@each $name, $color in $colors {
+  .t {
+    &-#{$name}{
+      color: $color;
+
+      @if $color != white and $color != black {
+        // Light
+        @each $name, $value in $light {
+          &-#{$name} { color: mix($color, white, $value); }
+        }
+        // Dark
+        @each $name, $value in $dark {
+          &-#{$name} { color: mix($color, black, $value); }
+        }
+      }
+    }
+  }
+
+  .bg {
+    &-#{$name}{
+      background-color: $color;
+
+      @if $color != white and $color != black {
+        // Light
+        @each $name, $value in $light {
+          &-#{$name} { background-color: mix($color, white, $value); }
+        }
+        // Dark
+        @each $name, $value in $dark {
+          &-#{$name} { background-color: mix($color, black, $value); }
+        }
+      }
+    }
+  }
+}
